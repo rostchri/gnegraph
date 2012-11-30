@@ -7,6 +7,7 @@
 	
 ## Usage
 * Example for defining graphs in DSL-Syntax:
+
 		include GneGraph
 	  g = graph :title => "Graph 1" do 
 	      node :title => "Node 1", :mysetting1 => 1 
