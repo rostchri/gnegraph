@@ -3,11 +3,10 @@
 
 ## Installing
 * Put the following in your Gemfile
-	gem 'gnegraph', :git => 'https://github.com/rostchri/gnegraph.git'
+		gem 'gnegraph', :git => 'https://github.com/rostchri/gnegraph.git'
 	
 ## Usage
 * Example for defining graphs in DSL-Syntax:
-
 		include GneGraph
 		g = graph :title => "Graph 1" do 
 			node :title => "Node 1", :mysetting1 => 1 
