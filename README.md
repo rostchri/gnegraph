@@ -26,6 +26,8 @@
 	    end
 		end
 		puts g.to_s(:include_children => true)
-  	# Ploting this graph using graphiz
+
+* Ploting this graph using graphiz
+
 		include GneGraph::Representation::Graphiz
 		plot(g,"test.png")
