@@ -10,15 +10,22 @@
 * Example for defining graphs in DSL-Syntax:
 
 		include GneGraph
-		g = graph :title => "Graph 1" do 
-			node :title => "Node 1", :mysetting1 => 1 
-			node :title => "Node 2", :mysetting2 => 2 
-			node :title => "Node 3", :mysetting3 => 2
-			graph :title => "Subgraph of Graph 1", :mysettingX => "X"  do 
-				node :title => "Node 10", :mysetting10 => 10
-				node :title => "Node 20", :mysetting20 => 20
-				node :title => "Node 30", :mysetting30 => 30
-			end
+		g = graph :title => "Graph 1", :truecolor => false, :rankdir => "BT" do
+	    node1 = add_node :id => 1, :title => "Node 1"
+	    node2 = add_node :id => 2, :title => "Node 2"
+	    add_edge :source => node1, :target => node2, :title => "my edge", :weight => 2
+	    add_edge do 
+	      set :source => add_node(:id => 3, :title => "Node 3")
+	      set :target => add_node(:id => 4, :title => "Node 4")
+	    end
+	    add_graph :title => "Subgraph of Graph 1" do 
+	      node10 = add_node :title => "Node 10", :shape => "polygon"
+	      node20 = add_node :title => "Node 20", :shape => "polygon"
+	      node30 = add_node :title => "Node 30", :shape => "polygon"
+	      add_edge :source => node10, :target => node20, :style => "dashed", :weight => 5
+	    end
 		end
 		puts g.to_s(:include_children => true)
-  
+  	# Ploting this graph using graphiz
+		include GneGraph::Representation::Graphiz
+		plot(g,"test.png")
