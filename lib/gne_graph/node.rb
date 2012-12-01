@@ -1,6 +1,6 @@
 module GneGraph
   class Node < UniversalBlockItem
-    attr_accessor :title, :parent
+    attr_accessor :title, :parent, :representation
     
     def initialize(options={},&block)
       # set some default options

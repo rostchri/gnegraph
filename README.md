@@ -1,7 +1,7 @@
 # GneGraph
 * Simple Library for defining graphs (consisting of subgraphs, nodes and edges) in DSL-Syntax
 
-## Installing
+## Installation
 * Put the following in your Gemfile:
 
 		gem 'gnegraph', :git => 'https://github.com/rostchri/gnegraph.git'
