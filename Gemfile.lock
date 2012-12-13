@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    gnegraph (0.1)
+      ruby-graphviz
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    ruby-graphviz (1.0.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gnegraph!
+  ruby-graphviz
