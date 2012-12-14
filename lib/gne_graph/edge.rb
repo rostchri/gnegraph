@@ -1,15 +1,16 @@
 module GneGraph
   class Edge < DSLBlock::UniversalItem
-    attr_accessor :title, :parent, :source, :target, :representation
+    attr_accessor :title, :parent, :source, :target, :representation, :goptions
     
     def initialize(options={},&block)
       # set some default options
-      # options = options.reverse_merge :show  => false
+      options = options.reverse_merge :goptions  => {}
       # set some instance-variables according to option-values
       set :parent    => options.delete(:parent),
           :source    => options.delete(:source),
           :target    => options.delete(:target),
-          :title     => options.delete(:title)
+          :title     => options.delete(:title),
+          :goptions  => options.delete(:goptions)
       super
     end
     def node(id)

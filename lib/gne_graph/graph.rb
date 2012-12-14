@@ -1,16 +1,17 @@
 module GneGraph
   
   class Graph < DSLBlock::UniversalItem
-    attr_accessor :title, :parent, :nodes, :edges, :representation
+    attr_accessor :title, :parent, :nodes, :edges, :representation, :goptions
   
     def initialize(options={},&block)
       # set some default options
-      # options = options.reverse_merge :show  => false
+      options = options.reverse_merge :goptions  => {}
       # set some instance-variables according to option-values
-      set :title  => options.delete(:title),
-          :parent => options.delete(:parent),
-          :nodes  => {},
-          :edges  => {}
+      set :title    => options.delete(:title),
+          :parent   => options.delete(:parent),
+          :goptions => options.delete(:goptions),
+          :nodes    => {},
+          :edges    => {}
       super
     end
 
