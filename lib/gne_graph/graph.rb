@@ -17,19 +17,19 @@ module GneGraph
     # returns edges, nodes and subgraphs by id
     def edge(id)
       res = edges[id]
-      puts "### WARNING: No edge with id ##{id} found" if res.nil?
+      #puts "### WARNING: No edge with id ##{id} found" if res.nil?
       res
     end
     
     def node(id)
       res = nodes[id]
-      puts "### WARNING: No node with id ##{id} found" if res.nil?
+      #puts "### WARNING: No node with id ##{id} found" if res.nil?
       res
     end
     
     def graph(id)
       res = nodes[id]
-      puts "### WARNING: No graph with id ##{id} found" if res.nil?
+      #puts "### WARNING: No graph with id ##{id} found" if res.nil?
       res
     end
   

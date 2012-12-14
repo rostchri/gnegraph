@@ -10,5 +10,12 @@ module GneGraph
           :title     => options.delete(:title)
       super
     end
+    
+    def to_s(opts={})
+      res = "#{self.class.name}: ##{id} title: #{title} depth: #{depth} options: #{options}"
+      res
+    end
+    
+    
   end
 end
