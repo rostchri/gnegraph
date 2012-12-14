@@ -1,4 +1,4 @@
-require "gne_graph/universalblockitem"
+require 'dslblock'
 require "gne_graph/graph"
 require "gne_graph/node"
 require "gne_graph/edge"

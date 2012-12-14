@@ -14,7 +14,9 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.require_paths = ["lib"]
-
+  
+  %w{ activesupport }.each do |dep|
+    gem.add_dependency dep, ['>= 3.0.0']
+  end
   gem.add_runtime_dependency "ruby-graphviz"
-  # gem.add_development_dependency "rails", "~> 3.2"
 end

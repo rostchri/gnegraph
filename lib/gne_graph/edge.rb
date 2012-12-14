@@ -1,5 +1,5 @@
 module GneGraph
-  class Edge < UniversalBlockItem
+  class Edge < DSLBlock::UniversalItem
     attr_accessor :title, :parent, :source, :target, :representation
     
     def initialize(options={},&block)

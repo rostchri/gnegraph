@@ -1,5 +1,5 @@
 module GneGraph
-  class Node < UniversalBlockItem
+  class Node < DSLBlock::UniversalItem
     attr_accessor :title, :parent, :representation
     
     def initialize(options={},&block)
